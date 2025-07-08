@@ -74,3 +74,15 @@ registerForm.addEventListener("submit", async (e) => {
     alert("Ocurrió un error");
   }
 });
+
+// Issue #2: Implementar la funcionalidad de agregar tareas - Completado
+function addTask() {
+    const input = document.getElementById('taskInput');
+    const taskList = document.getElementById('taskList');
+    if (input.value.trim() !== '') {
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        taskList.appendChild(li);
+        input.value = '';
+    }
+}
